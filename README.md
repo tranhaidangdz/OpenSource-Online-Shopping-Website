@@ -28,5 +28,44 @@
 
 ## Cài đặt và chạy thử
 1. Tải source code về máy:  
-   ```bash
+. mở 1 thư mục trống, vào git bash hoặc terminal: 
    git clone https://github.com/<your-username>/ONLINE_SHOPPING_PHP.git
+2. Giải nén (nếu tải file ZIP).
+3. Copy toàn bộ thư mục vào thư mục htdocs (nếu dùng XAMPP).
+4. Import file SQL (có trong thư mục /database ) vào MySQL:
+. Mở phpMyAdmin
+. Tạo database onlineshopping (hoặc tên khác, tùy config trong code)
+. Import file onlineshopping.sql
+5. Cấu hình kết nối database trong file config.php hoặc db.php (tùy vị trí trong source):
+   $servername = "localhost";
+   $username   = "root";
+   $password   = "";
+   $dbname     = "onlineshopping";
+6. Chạy dự án bằng đường dẫn: lên 1 trình duyệt như chrome hay firefox mở đường dẫn:
+   http://localhost/ONLINE_SHOPPING_PHP/
+7.Tài khoản demo
+. Tài khoản người dùng:
+Username: user
+Password: 123456
+. Tài khoản admin:
+Username: admin
+Password: admin123
+## Cấu trúc thư mục
+. /assets - Chứa CSS, JS, hình ảnh
+. /database hoặc /sql - File cơ sở dữ liệu
+. /includes - Các file tái sử dụng (header, footer, config DB)
+. /admin - Chức năng quản trị viên
+. /user hoặc /pages - Chức năng dành cho người dùng
+. index.php - Trang chủ website
+
+## Hướng phát triển
+. Tích hợp thanh toán online (PayPal, VNPay, MoMo, ZaloPay)
+. Tối ưu bảo mật (SQL Injection, XSS, CSRF)
+. Cải thiện UI/UX bằng framework frontend hiện đại (VueJS, React)
+. Phát triển REST API để hỗ trợ ứng dụng mobile
+## Demo giao diện
+
+(Thêm ảnh demo ở đây: trang chủ, giỏ hàng, admin, v.v.)
+© 2025 - Online Shopping PHP Project
+© author: tranhaidangdz
+© mail: trandang211@gmail.com
