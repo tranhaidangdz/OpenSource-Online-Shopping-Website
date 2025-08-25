@@ -272,3 +272,40 @@ if (isset($_POST["login_user_with_product"])) {
 		</div>
 	</form>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#login").on("submit", function(e) {
+			e.preventDefault();
+			var email = $("#login_email").val();
+			var pass = $("#login_password").val();
+
+			$(".login-overlay").show();
+
+			$.ajax({
+				url: "login.php",
+				method: "POST",
+				data: {
+					email: email,
+					password: pass
+				},
+				success: function(response) {
+					$(".login-overlay").hide();
+
+					if (response.trim() == "login_success") {
+						window.location.href = "index.php";
+					} else if (response.trim() == "cart_login") {
+						window.location.href = "cart.php";
+					} else if (response.trim() == "admin_login") {
+						window.location.href = "admin/addproduct.php";
+					} else {
+						$("#e_msg").html(response);
+						$(".login-alert-danger").show();
+					}
+				}
+			});
+		});
+	});
+</script>
