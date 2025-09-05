@@ -471,19 +471,21 @@ session_start();
                     <!-- SEARCH BAR -->
                     <div class="col-md-6">
                         <div class="header-search">
-                            <form>
-                                <select class="input-select">
+                            <form onsubmit="return false;">
+                                <select class="input-select" id="search_category">
                                     <option value="0">All Categories</option>
                                     <option value="1">Men</option>
-                                    <option value="1">Women</option>
+                                    <option value="2">Women</option>
                                 </select>
-                                <input class="input" id="search" type="text" placeholder="Search for products...">
-                                <button type="submit" id="search_btn" class="search-btn">
+                                <input class="input" id="search_input" type="text" placeholder="Search for products...">
+                                <button type="button" id="search_btn" class="search-btn">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </form>
+
                         </div>
                     </div>
+
                     <!-- /SEARCH BAR -->
 
                     <!-- ACCOUNT -->
