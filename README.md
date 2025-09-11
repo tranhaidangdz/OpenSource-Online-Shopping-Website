@@ -66,6 +66,6 @@ Password: admin123
 ## Demo giao diện
 
 (Thêm ảnh demo ở đây: trang chủ, giỏ hàng, admin, v.v.)
-© 2025 - Online Shopping PHP Project
-author: tranhaidangdz
-mail: trandang211@gmail.com
+. © 2025 - Online Shopping PHP Project
+. author: tranhaidangdz
+. email: trandang211@gmail.com
